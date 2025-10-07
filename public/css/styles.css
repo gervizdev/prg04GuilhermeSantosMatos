@@ -5,3 +5,43 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
+body.dark-theme {
+    background-color: #121212;
+    color: white;
+}
+
+.poema-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+}  
+
+.titulo-poema {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.poema {
+    font-family: 'georgia', serif;
+    line-height: 1.6;
+}
+
+.estrofe {
+    white-space: pre-line;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.autor {
+    font-style: italic;
+    margin-top: 2rem;
+    font-weight: bold;
+    color: #666;
+}
+
+body.dark-theme .autor {
+    color: #ccc;
+}
