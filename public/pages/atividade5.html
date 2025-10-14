@@ -6,17 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <title>Document</title>
+    <script src="../js/header.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-    <a href="../index.html">Voltar</a>
-    <button id="temaBtn">tema</button>
-    <link rel="stylesheet" href="../css/styles.css">
-    <script>
-        document.getElementById('temaBtn').addEventListener('click', function () {
-            document.body.classList.toggle('dark-theme');
-        });
-    </script>
+    <div id="header"></div>
 
     <div class="poema-container">
         <h1 class="titulo_poema">Tomara</h1>
@@ -38,9 +33,16 @@
                 É viver cada segundo
                 Como nunca mais...
             </p>
-            <p class="autor">  de Moraes,Vinícius</p>
+            <p class="autor"> de Moraes,Vinícius</p>
         </div>
     </div>
+    <script>
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

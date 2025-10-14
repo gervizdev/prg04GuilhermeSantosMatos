@@ -1,5 +1,16 @@
 /* styles.css - Documento CSS básico */
 
+:root {
+    --background-color: #f0f0f0;
+    --background-color-dark: #121212;
+    --background-color-button: #4CAF50;
+    --background-color-button-hover: #45a049;
+    --background-color-button-dark: #333;
+    --background-color-button-hover-dark: #555;
+    --text-color: #333;
+    --text-color-dark: #ccc;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,8 +18,10 @@ body {
 }
 
 body.dark-theme {
-    background-color: #121212;
-    color: white;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+    --background-color-button: var(--background-color-button-dark);
+    --background-color-button-hover: var(--background-color-button-hover-dark);
 }
 
 .poema-container {
@@ -16,12 +29,12 @@ body.dark-theme {
     margin: 2rem auto;
     padding: 2rem;
     text-align: center;
-}  
+}
 
 .titulo-poema {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 .poema {
@@ -44,4 +57,47 @@ body.dark-theme {
 
 body.dark-theme .autor {
     color: #ccc;
+}
+
+div.video {
+    position: relative;
+    background-color: var(--transparent);
+    height: 0px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 15px;
+    padding-bottom: 59%;
+}
+
+div.video iframe {
+    position: absolute;
+    background-color: var(--background-color);
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav#menu {
+    display: block;
+}
+
+nav#menu ul {
+    list-style-type: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -10px;
+    left: 30px;
+}
+
+nav#menu li {
+    background-color: var(--background-color-button);
+    margin-right: 20px;
 }
